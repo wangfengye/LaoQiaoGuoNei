@@ -1,0 +1,37 @@
+ext {
+
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.3",
+            minSdkVersion    : 21,
+            targetSdkVersion : 27,
+            versionCode      : 16,
+            versionName      : "3.7.0"
+    ]
+
+    manifestPlaceholders = [
+            //服务器地址  测试站 http://livenewtest.yunbaozb.com  正式站 https://livenew.yunbaozb.com
+//            serverHost       : "http://xingqiliu.kulehu.com",
+           // serverHost       : "http://www.ouyezb.com",
+            serverHost       : "http://live.kulehu.com",
+            //极光推送 IM
+            jpushAppKey      : "6f24834ded67431ba5a99344",
+
+            //腾讯地图
+            txMapAppKey      : "ROWBZ-DZXC4-YWHUY-XMXIA-JSZDO-F3BPH",
+            txMapAppSecret   : "FA0yWJv2llP2sfRVCIkLzXNonKup0e7v",
+
+            //腾讯bugly
+            buglyAppId       : "a5e114655e",
+
+            //百度语音识别
+            baiduAppId       : "15974542",
+            baiduAppKey      : "iGYRh2Cpdmyr3uxAyBXq6oGQ",
+            baiduAppSecretKey: "ISTKspktaQbTgeg4um38pYT5ctOQwgal",
+
+            //友盟统计
+            umengAppKey      : "5bff3f04b465f52652000b1e"
+
+    ]
+
+}

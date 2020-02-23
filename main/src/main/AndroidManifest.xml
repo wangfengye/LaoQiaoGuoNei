@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yunbao.main">
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.paihangActivity"></activity>
+        <activity android:name=".activity.AlphaActivity" />
+        <activity android:name=".activity.MyCouponActivity" />
+        <activity
+            android:name=".activity.LoginInvalidActivity"
+            android:exported="false"
+            android:theme="@style/dialog2">
+            <intent-filter>
+                <action android:name="com.yunbao.main.activity.LoginInvalidActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UserHomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.yunbao.main.activity.UserHomeActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FollowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditSexActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditSignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyImpressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyCoinActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.yunbao.main.activity.MyCoinActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MyVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyProfitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ModifyPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecommendActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

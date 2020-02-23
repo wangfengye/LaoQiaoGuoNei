@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:background="@mipmap/bg_goods_link"
+    >
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:text="❌"
+        android:id="@+id/btn_delete"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加商品链接"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/icon_add_img"
+            android:layout_marginTop="20dp"
+            android:id="@+id/img_add"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_goods_photo"
+            android:textColor="#fff9f9f9"
+            android:textSize="13dp"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@drawable/bg_input_link"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="13dp"
+            android:gravity="center"
+            android:id="@+id/et_input_link"
+            android:hint="@string/please_input_link"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#EEE"
+            android:layout_marginTop="30dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="确定"
+            android:id="@+id/btn_commit"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

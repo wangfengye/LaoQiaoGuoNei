@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MyCouponActivity">
+    <include layout="@layout/view_title"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="1px"
+        >
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:layout_weight="1"
+            android:id="@+id/rb_wait_use"
+            android:button="@null"
+            android:checked="true"
+            android:textColor="@drawable/selector_text_main"
+            android:tag="0"
+            />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:layout_weight="1"
+            android:id="@+id/rb_has_use"
+            android:button="@null"
+            android:textColor="@drawable/selector_text_main"
+            android:tag="1"
+            />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:layout_weight="1"
+            android:id="@+id/rb_overdue"
+            android:button="@null"
+            android:textColor="@drawable/selector_text_main"
+            android:tag="2"
+            />
+    </RadioGroup>
+
+    <com.yunbao.common.expand.viewpager.ViewLifeViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"
+        android:layout_marginTop="10dp"
+        ></com.yunbao.common.expand.viewpager.ViewLifeViewPager>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+apply from: "dependencies.gradle"
+
+
+buildscript {
+    repositories {
+
+        //阿里镜像
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        jcenter()
+        google()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-SNAPSHOT'
+
+    }
+}
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:appcompat-v7:27.1.0'
+    }
+}
+allprojects {
+    repositories {
+
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+
+        jcenter()
+        google()
+        maven {
+            url "https://maven.google.com"
+        }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+
+        maven{
+            url "https://dl.bintray.com/tencentqcloudterminal/maven"
+        }
+        maven { url "https://jitpack.io" }
+        //阿里镜像
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data >
+        <import type="com.yunbao.common.bean.CouponEntity" />
+        <variable name="coupon" type="com.yunbao.common.bean.CouponEntity" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/img_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_white_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+           android:padding="5dp"
+            android:src="@mipmap/icon_dialog_del"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/btn_dismiss"
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_coupon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:maxWidth="120dp"
+            android:maxLines="1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.9"
+
+            android:textColor="#fffc5f5f"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeMinTextSize="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintLeft_toLeftOf="@+id/img_bg"
+            app:layout_constraintTop_toTopOf="@+id/img_bg"
+            android:text="@{coupon.name}" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_store"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/img_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_coupon_title"
+            app:imageUrl="@{coupon.image}"
+            tools:src="@mipmap/ic_launcher_sys_msg" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textColor="#FFC4C3C3"
+            android:textSize="10sp"
+            app:autoSizeMaxTextSize="13sp"
+            app:autoSizeMinTextSize="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@+id/tv_validity"
+            android:text="@{coupon.location}"
+            tools:text="泰安"
+            android:id="@+id/tv_location"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#fffc5f5f"
+            android:textSize="20dp"
+            app:autoSizeMaxTextSize="25sp"
+            app:autoSizeMinTextSize="2sp"
+            app:autoSizeTextType="uniform"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/img_store"
+            app:layout_constraintTop_toTopOf="@+id/img_store"
+            android:text="@{'￥'+coupon.price}"
+            tools:text="￥20" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="#fffc5f5f"
+            android:textSize="13dp"
+            app:autoSizeMaxTextSize="13sp"
+            app:autoSizeMinTextSize="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+            app:layout_constraintLeft_toRightOf="@+id/tv_price"
+            android:text='@{"满"+coupon.controlPrice+"使用"}'
+            />
+
+        <TextView
+            android:id="@+id/tv_validity"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginTop="8dp"
+            android:maxWidth="130dp"
+            android:textColor="#FFC4C3C3"
+            android:textSize="12sp"
+            app:autoSizeMaxTextSize="13sp"
+            app:autoSizeMinTextSize="2sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintStart_toStartOf="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@+id/tv_condition"
+            android:text='@{"有效期："+coupon.endDate}'
+            tools:text="有效期：2019.04.01-2019.04.23" />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/img_qr_code"
+            app:imageUrl="@{coupon.qr}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text='@{"核销码  "+coupon.couponid}'
+            android:textSize="17dp"
+            tools:text="核销码"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

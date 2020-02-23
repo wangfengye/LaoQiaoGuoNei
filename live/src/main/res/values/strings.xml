@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="please_input_link">请输入商品链接</string>
+    <string name="upload_goods_photo">上传商品照片</string>
+    <string name="live_coupon">优惠券</string>
+    <string name="open_goods">开启商品</string>
+    <string name="open_goods_hint">开启商品后用户在直播间可以查看商品详情</string>
+    <string name="live_hint_open_coupon">小主，是否在直播间开启优惠券大放送？</string>
+
+
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:layout_width="51dp"
+        android:layout_height="58dp"
+        android:src="@mipmap/icon_open_goods"
+        android:layout_marginTop="10dp"
+     />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_goods_hint"
+        android:textColor="#ff9f9d9d"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:autoSizeMaxTextSize="20dp"
+        android:autoSizeMinTextSize="10dp"
+        android:layout_marginTop="5dp"
+        android:autoSizeTextType="uniform"
+        />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_clickable_state"
+            android:text="开 启"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:id="@+id/btn_open"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_clickable_state"
+            android:text="关 闭"
+            android:id="@+id/btn_close"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
